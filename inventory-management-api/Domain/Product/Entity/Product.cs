@@ -21,13 +21,14 @@ public class Product
     {
         
     }
-    public Product(ProductNameVo productName, ProductDescriptionVo productDescription, decimal salePrice, decimal purchasePrice, int stock, int minStock, int maxStock, ProductStatusVo status)
+    public Product(ProductNameVo productName, ProductDescriptionVo productDescription,ProductBarCodeVo productBarCodeVo ,ProductSalePriceVo productSalePriceVo, ProductPurchasePriceVo productPurchasePriceVo, ProductStockVo productStockVo, int minStock, int maxStock, ProductStatusVo status)
     {
         Name = productName.Value;
         Description = productDescription.Value;
-        SalePrice = salePrice;
-        PurchasePrice = purchasePrice;
-        Stock = stock;
+        Barcode = productBarCodeVo.Value;
+        SalePrice = productSalePriceVo.Value;
+        PurchasePrice = productPurchasePriceVo.Value;
+        Stock = productStockVo.Value;
         MinStock = minStock;
         MaxStock = maxStock;
         Status = status.Value;
